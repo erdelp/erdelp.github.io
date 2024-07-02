@@ -1,3 +1,3 @@
-# erdelp.github.io
+# HELLO AND WELCOME TO MY WEBSITE
 
-lol
+Coding stuff here soon.
