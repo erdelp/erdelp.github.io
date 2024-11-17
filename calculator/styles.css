@@ -72,12 +72,13 @@ h2, h3 {
 
 .logo-container {
     position: relative;
-    height: 100px;
+    height: 120px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    perspective: 1000px;
 }
 
 .logo-42 {
@@ -85,21 +86,27 @@ h2, h3 {
     width: auto;
     position: relative;
     transition: all 0.5s ease;
+    transform-style: preserve-3d;
 }
 
 .blackhole {
-    font-size: 3rem;
+    font-size: 4rem;
     position: absolute;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
+    animation: rotateHole 4s linear infinite;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073;
+    transform-style: preserve-3d;
 }
 
+/* Danger animation */
 .danger-zone .logo-42 {
-    animation: fallIntoHole 2s infinite;
+    animation: fallIntoHole 2.5s infinite;
 }
 
 .danger-zone .blackhole {
     opacity: 1;
+    transform: scale(1.2);
 }
 
 .safe-zone .blackhole {
@@ -108,12 +115,43 @@ h2, h3 {
 
 .safe-zone .logo-42 {
     transform: scale(1.1);
+    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes fallIntoHole {
-    0% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(20px) scale(0.8); }
-    100% { transform: translateY(40px) scale(0.5); }
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateY(15px) scale(0.8) rotate(180deg);
+    }
+    100% {
+        transform: translateY(30px) scale(0.3) rotate(360deg);
+    }
+}
+
+@keyframes rotateHole {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1.1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.15);
+    }
+    100% {
+        transform: translateY(0) scale(1.1);
+    }
 }
 
 table {
