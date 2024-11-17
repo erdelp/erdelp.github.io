@@ -43,7 +43,6 @@ function calculateBlackhole() {
     originalDeadline.setDate(originalDeadline.getDate() + targetData.days);
 
     let resultHTML = `
-        <p><strong>Original Deadline:</strong> ${formatDateEU(originalDeadline)}</p>
         <p><strong>Days Remaining:</strong>
             <span class="${isOverdue || isInDanger ? 'danger' : 'safe'}">
                 ${isOverdue ? `OVERDUE by ${Math.abs(daysRemaining)} days` : `${daysRemaining} days`}
