@@ -221,11 +221,12 @@ h2 {
         height: 25px;
     }
 }
-
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;  /* Changed from collapse to separate */
+    border-spacing: 0;         /* Added to keep cells tight together */
     margin-top: 20px;
+    overflow: hidden;          /* Added to ensure corners are rounded */
 }
 
 th, td {
@@ -241,4 +242,20 @@ th {
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 
+}
+
+th:first-child {
+    border-top-left-radius: 4px;
+}
+
+th:last-child {
+    border-top-right-radius: 4px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
 }
