@@ -78,6 +78,7 @@ h2 {
     border: 1px solid #444;
     color: #ffffff;
     border-radius: 4px;
+	box-sizing: border-box;
 }
 
 .input:focus {
