@@ -64,7 +64,7 @@ document.getElementById('freezeDays').addEventListener('input', function() {
                 ${isOverdue ? `OVERDUE by ${Math.abs(daysRemaining)} days` : `${daysRemaining} days`}
             </span>
         </p>
-        <p><strong>Final Deadline (with freeze):</strong>
+        <p><strong>Final Deadline :</strong>
             <span class="${isOverdue || isInDanger ? 'danger' : 'safe'}">
                 ${formatDateEU(deadlineDate)}
             </span>
