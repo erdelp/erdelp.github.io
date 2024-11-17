@@ -87,12 +87,17 @@ h2 {
     perspective: 1000px;
 } */
 
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo-container {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    height: 50px;
-    margin-right: 10px;
+    height: 30px;
+    margin-right: 5px;
     perspective: 1000px;
 }
 
