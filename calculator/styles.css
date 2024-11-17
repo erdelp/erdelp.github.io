@@ -11,11 +11,11 @@ body {
 }
 
 body.danger-zone {
-    background-color: #f92828bc;
+    background-color: #f92828d3;
 }
 
 body.safe-zone {
-    background-color: #4ade80;
+    background-color: #1dc259;
 }
 
 h2, h3 {
