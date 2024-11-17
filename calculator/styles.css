@@ -18,6 +18,12 @@ h2, h3 {
     font-weight: 600;
 }
 
+h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .card {
     max-width: 600px;
     margin: 20px auto;
@@ -70,7 +76,7 @@ h2, h3 {
     font-weight: bold;
 }
 
-.logo-container {
+/* .logo-container {
     position: relative;
     height: 120px;
     width: 100%;
@@ -79,10 +85,26 @@ h2, h3 {
     align-items: center;
     margin-bottom: 1rem;
     perspective: 1000px;
+} */
+
+.logo-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-right: 10px;
+    perspective: 1000px;
 }
 
-.logo-42 {
+/* .logo-42 {
     height: 50px;
+    width: auto;
+    position: relative;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+} */
+.logo-42 {
+    height: 30px; /* Reduced from 50px to match text height better */
     width: auto;
     position: relative;
     transition: all 0.5s ease;
@@ -90,7 +112,7 @@ h2, h3 {
 }
 
 .blackhole {
-    font-size: 4rem;
+    font-size: 2.5rem;
     position: absolute;
     opacity: 0;
     transition: all 0.5s ease;
