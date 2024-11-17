@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="logo-container">
+            <img src="./logo/42_Logo.svg.png" alt="42 Logo" class="logo-42" />
+            <div class="blackhole">⚫</div>
+        </div>
+        <h2>Blackhole Calculator</h2>
+
+        <div class="input-group">
+            <label class="label">Start Date:</label>
+            <input type="date" id="startDate" class="input">
+        </div>
+
+        <div class="input-group">
+            <label class="label">Current Milestone:</label>
+            <input type="number" id="milestone" class="input" min="0" max="6">
+        </div>
+
+        <div class="input-group">
+            <label class="label">Freeze Days:</label>
+            <input type="number" id="freezeDays" class="input" value="0" min="0">
+        </div>
+
+        <div id="results" class="results"></div>
+
+        <div>
+            <h3>Pace 24 Reference</h3>
+            <table id="referenceTable">
+                <tr>
+                    <th>Milestone</th>
+                    <th>Days at Pace 24</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

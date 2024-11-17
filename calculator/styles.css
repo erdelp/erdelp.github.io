@@ -1,0 +1,137 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+body.danger-zone {
+    background-color: #ff6b6b;
+}
+
+body.safe-zone {
+    background-color: #49ff53;
+}
+
+h2, h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 600;
+}
+
+.card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #2d2d2d;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.input {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #3d3d3d;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.danger {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.safe {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.logo-container {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo-42 {
+    height: 50px;
+    width: auto;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.blackhole {
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.danger-zone .logo-42 {
+    animation: fallIntoHole 2s infinite;
+}
+
+.danger-zone .blackhole {
+    opacity: 1;
+}
+
+.safe-zone .blackhole {
+    opacity: 0;
+}
+
+.safe-zone .logo-42 {
+    transform: scale(1.1);
+}
+
+@keyframes fallIntoHole {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(20px) scale(0.8); }
+    100% { transform: translateY(40px) scale(0.5); }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #3d3d3d;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
