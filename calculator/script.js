@@ -34,10 +34,11 @@ function calculateBlackhole() {
 
     const deadlineDate = new Date(startDate);
     deadlineDate.setDate(deadlineDate.getDate() + targetData.days + freezeDays);
+	deadlineDate.setHours(23, 59, 59, 999);
 
     const daysRemaining = Math.floor((deadlineDate - today) / (1000 * 60 * 60 * 24));
     const isOverdue = daysRemaining < 0;
-    const isInDanger = daysRemaining < WARNING_THRESHOLD && daysRemaining >= 0;
+    const isInDanger = daysRemaining <= WARNING_THRESHOLD && daysRemaining >= 0;
 
     const originalDeadline = new Date(startDate);
     originalDeadline.setDate(originalDeadline.getDate() + targetData.days);
