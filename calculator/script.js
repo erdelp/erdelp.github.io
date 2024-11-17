@@ -27,7 +27,22 @@ function calculateBlackhole() {
         document.getElementById('results').innerHTML = '';
         return;
     }
+	const disclaimerElement = document.querySelector('.disclaimer');
 
+    // Show/hide disclaimer based on freeze days
+    if (disclaimerElement) {
+        disclaimerElement.style.display = freezeDays > 0 ? 'block' : 'none';
+    }
+
+
+// Add event listener specifically for freeze days input
+document.getElementById('freezeDays').addEventListener('input', function() {
+    const freezeDays = parseInt(this.value) || 0;
+    const disclaimerElement = document.querySelector('.disclaimer');
+    if (disclaimerElement) {
+        disclaimerElement.style.display = freezeDays > 0 ? 'block' : 'none';
+    }
+});
     const start = new Date(startDate);
     const today = new Date();
     const targetData = milestoneData.find(m => m.milestone === milestone);
